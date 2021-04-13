@@ -13,16 +13,6 @@ const MangaController = {
             });
         })
     },
-    index: () => {
-        axios.get('http://localhost:1337/mangases')
-        .then(response => {
-            console.log(response);
-            //Creamos los objetos correspondientes a la clase modelo
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    },
     find: (id) => {
         return new Promise((resolve, reject) => {
             axios.get(`http://localhost:1337/mangases/${id}`)
